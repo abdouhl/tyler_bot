@@ -26,7 +26,7 @@ auth.set_access_token(
 api = tweepy.API(auth)
 
 
-req = requests.get('https://api.quotable.io/random?tags=business|leadership')
+req = requests.get('https://api.quotable.io/random?tags=business|leadership|inspirational|success')
 data =req.json()
 tweet = f'''"{data['content']}"--{data['author']}\n\n #{data['authorSlug'].replace('-','')} {"#"+" #".join(data['tags'])}'''[:280]
 api.update_status(status=tweet)
