@@ -1,8 +1,8 @@
-name: tyler twitter bot
+name: tyler tweet twitter bot
 
 on:
   schedule:
-    - cron: "0 0 * * *" 
+    - cron: "0 22 * * *" 
 jobs:
   build:
     runs-on: ubuntu-latest
